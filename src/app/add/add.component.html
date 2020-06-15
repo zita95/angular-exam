@@ -1,0 +1,7 @@
+<p>add works!</p>
+<form [formGroup]="addForm">
+    <label for="name" ><input type="text" formControlName="name">name</label>
+    <label for="type" ><input type="number" min="1" max="2" formControlName="type">tpye</label>
+    <label for="description" ><input type="text" formControlName="description">description</label>
+</form>
+<button [disabled]="addForm.invalid" (click)="onSaveChanges()">Add pet</button>
